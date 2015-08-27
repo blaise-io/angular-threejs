@@ -1,0 +1,37 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <title>Angular ThreeJS</title>
+    <link rel="stylesheet" href="demo/app.css" />
+</head>
+<body>
+
+<three-js>
+    <three-js-canvas></three-js-canvas>
+    <three-js-perspective-camera fov="70" near="1" far="10000" position="[0,300,300]"></three-js-perspective-camera>
+    <three-js-objects objects="objects"></three-js-objects>
+    <three-js-orbit-controls max-polar-angle="1.55"></three-js-orbit-controls>
+
+    <!-- Controls/debug -->
+    <pre ng-if="!controls.showJSON" ng-click="controls.showJSON=true">Show JSON</pre>
+    <pre ng-if="controls.showJSON" ng-click="controls.showJSON=false">{{scene|json}}</pre>
+    <div class="controls">
+        <button ng-click="addRandomCube(scene)">Cube</button>
+        <button ng-click="addConfetti(scene, controls.text)">Confetti</button>
+        <form ng-submit="addText(scene, controls.text)">
+            <button ng-init="controls.text='?'">Text</button>
+            <input ng-model="controls.text" style="width:3em" />
+        </form>
+    </div>
+</three-js>
+
+<script src="lib/three.js"></script>
+<script src="lib/orbitcontrols.js"></script>
+<script src="lib/typeface.js"></script>
+<script src="lib/angular.js"></script>
+<script src="angular-threejs.js"></script>
+<script src="demo/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "globalstrict": true,
+  "browser": true,
+  "eqeqeq": true,
+  "curly": true,
+  "devel": true,
+  "globals": {
+    "angular": false,
+    "THREE": false
+  }
+}

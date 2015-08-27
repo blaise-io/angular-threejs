@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background: #333;
+    overflow: hidden;
+}
+
+html, body, three-js, three-js-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+pre {
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    position: absolute;
+    width: 35em;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    bottom: 0;
+    font: 11px monaco, consolas, monospace;
+}
+
+.controls {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.controls form {
+    display: inline;
+}
+
+.controls button,
+.controls input {
+    font-size: 1.5em;
+    overflow: hidden;
+    white-space: nowrap;
+}
