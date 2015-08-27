@@ -1,6 +1,6 @@
 # angular-threejs
 
-Allows you to quickly build a scene using directives like so:
+Allows you to build a scene using directives:
 
 ```html
 <three-js>
